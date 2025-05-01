@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Daniel Lee">
+    <meta name="description" content="Stridon — Shop top-tier footwear and discover tips for your next Marathon.">
+    <meta name="theme-color" content="#0077FF">
+
+    <!-- Open Graph (Facebook, LinkedIn, etc.) -->
+    <meta property="og:title" content="Stridon | Elite Running Shoes & Marathon Tips">
+    <meta property="og:description"
+        content="Discover Stridon — high-performance running shoes and marathon gear trusted by athletes. From buying tips to the best race-day shoes.">
+    <meta property="og:image" content="https://stridon.com/images/marathon-og.jpg">
+    <meta property="og:url" content="https://stridon.com">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Stridon | Elite Running Shoes & Marathon Tips">
+    <meta name="twitter:description"
+        content="Prepare for your next marathon with Stridon's elite gear guide and premium footwear. Built for performance and comfort.">
+    <meta name="twitter:image" content="https://stridon.com/images/marathon-og.jpg">
+    <meta name="twitter:site" content="@Stridon">
+    <meta name="twitter:creator" content="@Stridon">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon_io/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon_io/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_io/apple-touch-icon.png">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://stridon.com">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <title>Stridon</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+
+</head>
+
+<body>
+    <a href="#main-content" id="skip">Skip to main content</a>
+    <header>
+        <div id="header-content">
+            <h1><a href="/index.html">Stridon</a></h1>
+            <nav>
+                <h2 class="sr-only">Main Navigation</h2>
+                <ul id="nav-sections">
+                    <li><a href="#guide">Guide</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <ul id="nav-utils">
+                    <li>
+                        <button id="cartButton" class="cart-button" aria-label="View cart">
+                            <img src="images/cart-black.svg" alt="Cart" class="cart-icon" id="nav-cart-icon">
+                            <span id="cartCount">0</span>
+                        </button>
+                    </li>
+                    <li><button id="darkModeToggle" aria-label="Toggle dark mode">🌙</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <picture>
+            <img src="images/marathon.jpg" alt="Marathon">
+        </picture>
+        <section id="guide">
+            <h2>Guide to pick a running shoe for a marathon</h2>
+            <p>Preparing for your first (or next) marathon is a serious commitment. Choosing the right pair of shoes can
+                make all the difference — not just for performance, but also for injury prevention and endurance. Here’s
+                how to pick the perfect high-end running shoe to support every mile.</p>
+
+            <div id="grid-container">
+                <div class="grid-item">
+                    <h3>Prioritize Fit Over Brand</h3>
+                </div>
+                <div class="grid-item">
+                    <h3>Understand Your Stride</h3>
+                </div>
+                <div class="grid-item">
+                    <h3>Look for Lightweight Durability</h3>
+                </div>
+                <div class="grid-item">
+                    <h3>Cushioning Matters - But Balance is Key</h3>
+                </div>
+            </div>
+
+        </section>
+        <section id="shop">
+            <h2>Shop Top Marathon Shoes to Power Your Run</h2>
+            <p>Whether you’re training for your first marathon or chasing a personal best, these high-end shoes are
+                designed to support every mile with precision, comfort, and durability. Here are our top picks for
+                serious runners:</p>
+
+            <div class="products">
+                <section class="product">
+                    <div class="carousel">
+                        <div class="carousel-images">
+                            <img src="images/nike1.png" alt="Nike Alphafly 3 - Front" class="active">
+                            <img src="images/nike2.png" alt="Nike Alphafly 3 - Side">
+                            <img src="images/nike3.png" alt="Nike Alphafly 3 - Back">
+                            <img src="images/nike4.png" alt="Nike Alphafly 3 - Front">
+                            <img src="images/nike5.png" alt="Nike Alphafly 3 - Side">
+                            <img src="images/nike6.png" alt="Nike Alphafly 3 - Back">
+                        </div>
+                        <div class="carousel-buttons">
+                            <button class="carousel-button active" data-index="0">1</button>
+                            <button class="carousel-button" data-index="1">2</button>
+                            <button class="carousel-button" data-index="2">3</button>
+                            <button class="carousel-button" data-index="3">4</button>
+                            <button class="carousel-button" data-index="4">5</button>
+                            <button class="carousel-button" data-index="5">6</button>
+                        </div>
+                    </div>
+                    <h3>Nike Alphafly 3</h3>
+                    <p>Lightweight, ultra-responsive cushioning, and built for race-day performance.</p>
+                    <div class="price-cart-container">
+                        <p class="price">$285</p>
+                        <button class="add-to-cart" data-index="0"><img src="images/cart-blue.svg" alt="Cart"
+                                class="cart-icon">Add to Cart</button>
+                    </div>
+                </section>
+
+                <section class="product">
+                    <div class="carousel">
+                        <div class="carousel-images">
+                            <img src="images/adidas1.png" alt="Adidas Adizero Adios Pro 4 - Front" class="active">
+                            <img src="images/adidas2.png" alt="Adidas Adizero Adios Pro 4 - Side">
+
+                        </div>
+                        <div class="carousel-buttons">
+                            <button class="carousel-button active" data-index="0">1</button>
+                            <button class="carousel-button" data-index="1">2</button>
+
+                        </div>
+                    </div>
+                    <h3>Adidas Adizero Adios Pro 4</h3>
+                    <p>Carbon-infused energy rods provide propulsion and stamina for long distances.</p>
+                    <div class="price-cart-container">
+                        <p class="price">$250</p>
+                        <button class="add-to-cart" data-index="1"><img src="images/cart-blue.svg" alt="Cart"
+                                class="cart-icon">Add to Cart</button>
+                    </div>
+                </section>
+
+                <section class="product">
+                    <div class="carousel">
+                        <div class="carousel-images">
+                            <img src="images/asics1.png" alt="Asics Metaspeed Sky Paris - Red" class="active">
+                            <img src="images/asics2.png" alt="Asics Metaspeed Sky Paris - Yellow">
+                            <img src="images/asics3.png" alt="Asics Metaspeed Sky Paris - Sky">
+                            <img src="images/asics4.png" alt="Asics Metaspeed Sky Paris - Gray/Pink">
+                        </div>
+                        <div class="carousel-buttons">
+                            <button class="carousel-button active" data-index="0">1</button>
+                            <button class="carousel-button" data-index="1">2</button>
+                            <button class="carousel-button" data-index="2">3</button>
+                            <button class="carousel-button" data-index="3">4</button>
+                        </div>
+                    </div>
+                    <h3>Asics Metaspeed Sky Paris</h3>
+                    <p>Designed to maximize stride length with featherlight construction and bounce.</p>
+                    <div class="price-cart-container">
+                        <p class="price">$250</p>
+                        <button class="add-to-cart" data-index="2"><img src="images/cart-blue.svg" alt="Cart"
+                                class="cart-icon">Add to Cart</button>
+                    </div>
+                </section>
+
+                <section class="product">
+                    <div class="carousel">
+                        <div class="carousel-images">
+                            <img src="images/saucony1.png" alt="Saucony Endorphin Pro 4 - Front" class="active">
+                            <img src="images/saucony2.png" alt="Saucony Endorphin Pro 4 - Side">
+                            <img src="images/saucony3.png" alt="Saucony Endorphin Pro 4 - Back">
+                            <img src="images/saucony4.png" alt="Saucony Endorphin Pro 4 - Back">
+                        </div>
+                        <div class="carousel-buttons">
+                            <button class="carousel-button active" data-index="0">1</button>
+                            <button class="carousel-button" data-index="1">2</button>
+                            <button class="carousel-button" data-index="2">3</button>
+                            <button class="carousel-button" data-index="3">4</button>
+                        </div>
+                    </div>
+                    <h3>Saucony Endorphin Pro 4</h3>
+                    <p>High-speed, high-cushion shoe with a carbon plate for effortless forward motion.</p>
+                    <div class="price-cart-container">
+                        <p class="price">$225</p>
+                        <button class="add-to-cart" data-index="3"><img src="images/cart-blue.svg" alt="Cart"
+                                class="cart-icon">Add to Cart</button>
+                    </div>
+                </section>
+
+                <section class="product">
+                    <div class="carousel">
+                        <div class="carousel-images">
+                            <img src="images/hoka1.png" alt="Hoka Cielo X1 2.0 - Front" class="active">
+                            <img src="images/hoka2.png" alt="Hoka Cielo X1 2.0 - Side">
+                        </div>
+                        <div class="carousel-buttons">
+                            <button class="carousel-button active" data-index="0">1</button>
+                            <button class="carousel-button" data-index="1">2</button>
+                        </div>
+                    </div>
+                    <h3>Hoka Cielo X1 2.0</h3>
+                    <p>Supercharged midsole foam paired with aggressive carbon propulsion plate technology.</p>
+                    <div class="price-cart-container">
+                        <p class="price">$275</p>
+                        <button class="add-to-cart" data-index="4"><img src="images/cart-blue.svg" alt="Cart"
+                                class="cart-icon">Add to Cart</button>
+                    </div>
+                </section>
+
+                <section class="product">
+                    <div class="carousel">
+                        <div class="carousel-images">
+                            <img src="images/nb1.png" alt="New Balance FuelCell Elite v3 - Pink" class="active">
+                            <img src="images/nb2.png" alt="New Balance FuelCell Elite v3 - White">
+                        </div>
+                        <div class="carousel-buttons">
+                            <button class="carousel-button active" data-index="0">1</button>
+                            <button class="carousel-button" data-index="1">2</button>
+                        </div>
+                    </div>
+                    <h3>New Balance FuelCell Elite v3</h3>
+                    <p>Explosive toe-offs and plush comfort to power you through the final miles.</p>
+                    <div class="price-cart-container">
+                        <p class="price">$250</p>
+                        <button class="add-to-cart" data-index="5"><img src="images/cart-blue.svg" alt="Cart"
+                                class="cart-icon">Add to Cart</button>
+                    </div>
+                </section>
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>If you have any questions, feel free to reach out!</p>
+
+            <form id="contact-form">
+                <label for="fullName">Full Name<span class="required">*</span></label>
+                <input type="text" name="fullName" id="fullName">
+                <p class="hidden">Please enter your full name</p>
+
+                <label for="number">Phone number<span class="required">*</span></label>
+                <input type="text" name="number" id="number" placeholder="123-456-7890">
+                <p class="hidden">Please enter a valid phone number</p>
+
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="example@email.com">
+                <p class="hidden">Please enter a valid email</p>
+
+                <fieldset>
+                    <legend>Preferred Method of Contact <span class="required">*</span></legend>
+                    <label class="radio">
+                        <input type="radio" name="contact_method" id="phone_radio" value="phone" checked>
+                        <span class="radio_control"></span>
+                        <span>Phone</span>
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="contact_method" id="email_radio" value="email">
+                        <span class="radio_control"></span>
+                        <span>Email</span>
+                    </label>
+                </fieldset>
+
+                <label for="comment">Comment<span class="required">*</span></label>
+                <textarea name="comment" id="comment"></textarea>
+                <p class="hidden">Please enter your comment</p>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <div id="submitModal" class="modal hidden">
+            <div class="modal-content">
+                <span id="submitModalClose" class="close">&times;</span>
+
+                <h2>Your message has been sent successfully!</h2>
+                <p>Full Name: <span id="modal_fullName"></span></p>
+                <p>Phone Number: <span id="modal_number"></span></p>
+                <p>Email: <span id="modal_email"></span></p>
+                <p>Comment: <span id="modal_comment"></span></p>
+            </div>
+        </div>
+
+        <div id="cartModal" class="modal hidden">
+            <div class="modal-content">
+                <span id="cartModalClose" class="close">&times;</span>
+                <h2>Shopping Cart</h2>
+                <div id="cartItems">
+                    <!-- Cart items will be dynamically added here -->
+                </div>
+                <p>Sub-Total: <span id="subTotal">$0</span></p>
+                <p>Tax Rate: <span id="taxRate">8.5%</span></p>
+                <p>Shipping: <span id="shipping">Flat $5.00</span></p>
+                <p>Total: <span id="finalTotal">$0</span></p>
+                <button id="checkoutButton">Checkout</button>
+            </div>
+        </div>
+
+        <div id="checkoutModal" class="modal hidden">
+            <div class="modal-content">
+                <span id="checkoutModalClose" class="close">&times;</span>
+                <h2>Your order has been successfully placed.</h2>
+                <p>You’ll receive a confirmation email shortly with the details of your purchase.</p>
+                <p>We hope you enjoy your run with your new gear!</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Copyright &copy; <span>2025</span> <b>Daniel Lee</b></p>
+        <p>This site is for educational purposes only</p>
+    </footer>
+
+</body>
+
+</html>

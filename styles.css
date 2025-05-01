@@ -1,0 +1,795 @@
+/* 
+    CSS RESET CODE
+*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+    text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+    scroll-margin-block: 5ex;
+}
+
+/* root/Variables */
+:root {
+    --font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+    --primary-color: #0077FF;
+    --secondary-color: #FF5722;
+    --secondary-color-dim: #FF572270;
+    --background-light: #F9F9F9;
+    --background-dark: #121212;
+    --text-light: #222222;
+    --text-dark: #E0E0E0;
+}
+
+/* skip link */
+#skip {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+#skip:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    color: var(--background-dark);
+    outline: 4px solid var(--secondary-color);
+    font-size: 1.2rem;
+    margin-bottom: 2px;
+    font-weight: bold;
+}
+
+/* accessibility - hidden content for screen readers */
+.sr-only {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-size: 3rem;
+    font-style: normal;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+h2,
+h3,
+p,
+a,
+button,
+label,
+input,
+legend,
+textarea {
+    font-family: var(--font-family);
+}
+
+h1 a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: border 0.2s ease-in-out
+}
+
+nav ul li a:hover {
+    border-bottom: 3px var(--background-dark) solid;
+}
+
+body {
+    margin: 0;
+    background-color: var(--background-light);
+    color: var(--text-light);
+}
+
+header {
+    padding: 0.5rem;
+    background-color: var(--background-light);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+main {
+    margin: 0 auto;
+    width: 1280px;
+    padding: 0.5rem 0;
+}
+
+
+picture img {
+    width: 100vw;
+    height: 50vh;
+    object-fit: cover;
+    object-position: center;
+}
+
+#header-content {
+    width: 1280px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button {
+    color: var(--text-light);
+}
+
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    gap: 4rem;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+}
+
+#nav-sections {
+    gap: 2rem;
+}
+
+#nav-utils {
+    gap: 0.5rem;
+}
+
+#guide {
+    padding-top: 2rem;
+}
+
+#shop {
+    padding-top: 2rem;
+}
+
+#contact {
+    padding-top: 2rem;
+}
+
+/* Grid container */
+#grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 2rem 0;
+}
+
+#contact-form p {
+    padding: 0 0.2rem;
+    margin: 0;
+    color: var(--secondary-color)
+}
+
+.hidden {
+    display: none;
+}
+
+
+.grid-item {
+    background-color: var(--secondary-color-dim);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100px;
+}
+
+.grid-item h3 {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+
+.carousel-images {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-images img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.carousel-images img.active {
+    opacity: 1;
+}
+
+.carousel-buttons {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.carousel-button {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-button:hover {
+    background-color: var(--primary-color);
+}
+
+.carousel-button.active {
+    background-color: var(--primary-color);
+    color: var(--text-dark);
+    font-weight: bold;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 2rem 0;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 1.3rem;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+.price-cart-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+.price-cart-container button {
+    background: none;
+    border: 2px solid var(--primary-color);
+    cursor: pointer;
+    margin: 0.1rem;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.price-cart-container button .cart-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    object-fit: contain;
+}
+
+.price-cart-container button:hover {
+    outline: 2px solid var(--primary-color);
+    font-weight: bold;
+}
+
+/* Cart button styles */
+.cart-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-light);
+}
+
+.cart-icon {
+    width: 2rem;
+    height: 2rem;
+    object-fit: contain;
+}
+
+#cartCount {
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: var(--secondary-color);
+    color: var(--text-dark);
+    padding: 0.3rem 0.5rem;
+    border-radius: 10%;
+    min-width: 2.5rem;
+    text-align: center;
+    line-height: 1;
+}
+
+/* Contact Form Styles */
+#contact {
+    margin: 4rem 20rem;
+}
+
+#contact h2 {
+    margin-bottom: 1rem;
+}
+
+#contact p {
+    margin-bottom: 1rem;
+}
+
+#contact label {
+    display: block;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.1rem;
+    padding-top: 1rem;
+}
+
+#contact .required {
+    color: var(--secondary-color);
+    font-size: 1rem;
+}
+
+#contact input,
+#contact select,
+#contact textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 2px solid var(--text-light);
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: var(--font-family);
+    background-color: var(--background-light);
+}
+
+#contact textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+#contact fieldset {
+    border: 2px solid var(--text-light);
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1.5rem 0;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+#contact input.error,
+#contact textarea.error {
+    border: 2px solid var(--secondary-color);
+}
+
+
+#contact legend {
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0 0.5rem;
+}
+
+#contact .radio {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+
+#contact .radio input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    background-color: var(--primary-color);
+}
+
+#contact .radio .radio_control {
+    position: relative;
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    border: 2px solid var(--text-light);
+    background-color: var(--background-light);
+    transition: all 0.3s ease;
+}
+
+#contact .radio input[type="radio"]:checked+.radio_control {
+    border-color: var(--primary-color);
+    background-color: var(--primary-color);
+}
+
+#contact button[type="submit"] {
+    border: 2px solid var(--background-dark);
+    background-color: var(--background-light);
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+#contact button[type="submit"]:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    transform: translateY(-1px);
+}
+
+#contact button[type="submit"]:active {
+    transform: translateY(0);
+}
+
+#contact input:focus,
+#contact select:focus,
+#contact textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+
+footer {
+    background-color: var(--background-dark);
+    color: var(--text-dark);
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 500;
+    padding: 2rem;
+}
+
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* dim background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-light);
+    color: var(--text-light);
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 700px;
+    width: 100%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.modal-content h2 {
+    text-align: center;
+    padding-bottom: 1.5rem;
+}
+
+.modal-content p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding-left: 1rem;
+}
+
+#cartModal .modal-content p {
+    padding-right: 1rem;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.modal-content p span {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.cart-item:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.cart-item-name {
+    font-family: var(--font-family);
+    flex: 1;
+    font-weight: 500;
+}
+
+.cart-item-price-quantity {
+    font-family: var(--font-family);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.cart-item-price-quantity button {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--secondary-color);
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.cart-item-price-quantity button:hover {
+    background-color: var(--primary-color);
+}
+
+#cart-item-price {
+    padding-right: 2rem;
+    font-weight: 500;
+    font-family: var(--font-family);
+}
+
+#cart-item-quantity {
+    width: 2rem;
+    text-align: center;
+    font-weight: 500;
+    font-family: var(--font-family);
+}
+
+.cart-item-remove {
+    margin-left: 2rem;
+    ;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--secondary-color);
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: var(--font-family);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-item-remove:hover {
+    background-color: var(--primary-color);
+}
+
+.cart-item-price-quantity input {
+    width: 4rem;
+    text-align: center;
+    border: 1px solid var(--secondary-color);
+    border-radius: 4px;
+    padding: 0.2rem;
+}
+
+
+.checkoutFigures {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+}
+
+#checkoutButton {
+    display: inline-block;
+    width: 100%;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    margin-top: 1rem;
+    padding: 1rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    font-family: var(--font-family);
+    transition: all 0.3s ease;
+    margin-left: auto;
+    margin-right: 1rem;
+}
+
+#checkoutButton:hover {
+    background-color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+
+.close {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--secondary-color);
+}
+
+#modal_comment {
+    white-space: pre-line;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Dark mode */
+/* Toggle button style */
+#darkModeToggle {
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 1001;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+#darkModeToggle:active {
+    transform: rotate(360deg) scale(1.2);
+}
+
+
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: var(--background-dark);
+    color: var(--text-dark);
+}
+
+body.dark-mode header,
+body.dark-mode footer,
+body.dark-mode #cartModal .modal-content {
+    background-color: var(--background-dark);
+    color: var(--text-dark)
+}
+
+body.dark-mode nav ul li a:hover {
+    border-color: var(--primary-color);
+}
+
+body.dark-mode .price-cart-container button {
+    color: var(--text-dark);
+}
+
+body.dark-mode a {
+    color: var(--primary-color);
+}
